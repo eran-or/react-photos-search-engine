@@ -13,23 +13,26 @@ let History = ({ searchHistory, onClickHandle }) => {
       //Display the topics and time of search when clicking the row you will back to search //resulte, and update the search time in the history page.
       <tr key={timeOfSearch}
         onClick={() => (onClickHandle(topic))}>
-        <td className="col-xs-6">{timeOfSearch}</td>
-        <td className="col-xs-6"><Link to={`/Search?q=${topic}`}>{topic}</Link></td>
+        <td><span  className="search-of-time">{timeOfSearch}</span></td>
+        <td><Link to={`/Search?q=${topic}`}>{topic}</Link></td>
       </tr>
     tableRows.push(tr);
   }
 
   return (
     <div>
-      <div>
-
-        <header className="col-md-12 main-caption main-header">History</header>
+      <div className="main-header clearfix">
+        <header className="main-caption col-xs-12">
+          <span className="btn pull-right">History</span>
+          <Link className="btn btn-link pull-left" to="/">Start to Search</Link>
+        </header>
+        
       </div>
       <div className="table-responsive container-fluid">
         <table className="table text-left">
           <tbody>
             <tr>
-              <th className="col-xs-6">Searched At</th><th className="col-xs-6">Topic</th>
+              <th className="col-xs-3"><span className="searched-at">Searched At</span></th><th className="col-xs-13"><span className="topic">Topic</span></th>
             </tr>
             {tableRows}
           </tbody>
