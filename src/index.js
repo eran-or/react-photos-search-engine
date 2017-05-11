@@ -39,23 +39,23 @@ const store = createStore(
 // }
 
 const history = qhistory(createBrowserHistory(), stringify, parse)
-if(typeof history.location.key === 'undefined'){
-//First visit in inner url, we prevent the crush of no state object.
-  history.replace({
-      pathname: history.location.pathname,
-      query: {
-        q:history.location.query.q
-      },
-      search: stringify({ q: history.location.search }),
-      state: {
-        topic: history.location.query.q
-      }
-    })
-}
+// if(typeof history.location.key === 'undefined'){
+// //First visit in inner url, we prevent the crush of no state object.
+//   history.replace({
+//       pathname: history.location.pathname,
+//       query: {
+//         q:history.location.query.q
+//       },
+//       search: stringify({ q: history.location.search }),
+//       state: {
+//         topic: history.location.query.q
+//       }
+//     })
+// }
 
 const router = (
   <Provider store={store}>
-    <Router history={history}>
+    <Router history={history} basename="/react-photos-search-engine">
       <App>
         <Switch>
           <Route exact path="/" component={Header} />
