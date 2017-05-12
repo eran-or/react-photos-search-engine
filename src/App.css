@@ -13,6 +13,9 @@ body{ background:tan;}
   margin-right:5px;
   margin-left: 5px;
 }
+.disable-events{
+  pointer-events:none;
+}
 @media screen and (max-width: 768px) {
   .xs-pull-right{
     float: right;

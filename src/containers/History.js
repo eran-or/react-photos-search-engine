@@ -23,7 +23,7 @@ let History = ({ searchHistory, onClickHandle }) => {
     <div>
       <div className="main-header clearfix">
         <header className="main-caption col-xs-12">
-          <span className="btn pull-right">History</span>
+          <span className="btn pull-right disable-events">History</span>
           <Link className="btn btn-link pull-left" to="/">Start to Search</Link>
         </header>
         
