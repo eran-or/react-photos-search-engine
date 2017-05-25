@@ -30,8 +30,8 @@ const store = createStore(
       thunk,
       //recoverFromStorage,
       logger
-    ),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+    //,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
 // if(localStorage.getItem("PS_ENGINE_STATE")){
